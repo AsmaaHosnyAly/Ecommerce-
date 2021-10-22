@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { validateNotEmpty } from 'validation-utils';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,7 +11,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,16 @@ import { FormsModule } from '@angular/forms';
     ProductListComponent,
     SidebarComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ProductDetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

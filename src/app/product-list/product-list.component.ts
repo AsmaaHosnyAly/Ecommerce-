@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Product} from '../project'
+import{Router} from '@angular/router'
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -251,13 +252,16 @@ export class ProductListComponent implements OnInit {
   }
   }
   ];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   
   receiveInfo(Product:any){
    alert(`parnt  ${Product}`);
-  }
+   this.router.navigate([`Product-details/${Product.id}`]);
 
+  }
 }
+
+
