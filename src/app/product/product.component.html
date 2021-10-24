@@ -2,9 +2,14 @@
     <img [src]="productItem.image" class="card-img-top"width="200" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{productItem.title}}</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+     <p>Price:{{productItem.price}}</p>
     </div>
-    <button class="btn btn-dark"(click)="addCart()"> add To cart</button>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check  btn-dark" name="btnradio" id="btnradio1" autocomplete="off" (click)="addCart()">
+      <label class="btn btn-dark " for="btnradio1">add To cart</label>
+      <input type="radio" class="btn-check  btn-dark" name="btnradio" id="btnradio3" autocomplete="off"(click)="viewDetails()">
+      <label class="btn btn-outline-secondary"  for="btnradio3">View Details</label>
+    </div>
     <div class="card-footer">
       <small class="text-muted">Last updated 3 mins ago</small>
     </div>

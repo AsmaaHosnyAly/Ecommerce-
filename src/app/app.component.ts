@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -10,4 +11,6 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 })
 export class AppComponent {
   title = 'ecomerce';
+  faCoffee = faCoffee;
+ 
 }

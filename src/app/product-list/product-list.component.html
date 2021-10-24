@@ -3,6 +3,8 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 ">
     <div class="col-4" *ngFor="let product of productList">
     <app-product [productItem]="product" (sendInfo)="receiveInfo($event)"></app-product>
+    <!-- <img [src]="product.image" class="card-img-top"width="200" alt="...">
+    {{product.title}} -->
     </div>
   </div>
 
